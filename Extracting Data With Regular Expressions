@@ -1,0 +1,8 @@
+fhandle = open('accessing.txt')
+contents = fhandle.read()
+import re
+numbers = re.findall('[0-9]+', contents)   # Searching for any digits (one or more) in our file; results are in list named "numbers"
+for i in range(0, len(numbers)):           # Converting elements in "numbers" list into integers
+     numbers[i] = int(numbers[i])
+total = sum(numbers)                       
+print(total)  
